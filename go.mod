@@ -1,4 +1,4 @@
-module github.com/things-labs/cicd-go-template
+module github.com/things-go/extime
 
 go 1.17
 
