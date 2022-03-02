@@ -296,3 +296,39 @@ func PreviousEndOfQuarter(year int, q Quarter) time.Time {
 func NextEndOfQuarter(year int, q Quarter) time.Time {
 	return StartOfQuarter(year, q).AddDate(0, 6, 0).Add(-time.Nanosecond)
 }
+
+// StartOfQuarter2 获取时间季度开始的时间
+// 2022-01-01 00:00:00 +0800 CST
+func StartOfQuarter2(t time.Time) time.Time {
+	return StartOfQuarter(t.Year(), GetQuarter(t.Month()))
+}
+
+// PreviousStartOfQuarter 获取时间的上个季度开始的时间
+// 2022-01-01 00:00:00 +0800 CST
+func PreviousStartOfQuarter2(t time.Time) time.Time {
+	return PreviousStartOfQuarter(t.Year(), GetQuarter(t.Month()))
+}
+
+// NextStartOfQuarter 获取时间的下个季度开始的时间
+// 2022-04-01 00:00:00 +0800 CST
+func NextStartOfQuarter2(t time.Time) time.Time {
+	return NextStartOfQuarter(t.Year(), GetQuarter(t.Month()))
+}
+
+// EndOfQuarter 获取时间的季度结束的时间
+// 2022-03-31 23:59:59.999999999 +0800 CST
+func EndOfQuarter2(t time.Time) time.Time {
+	return EndOfQuarter(t.Year(), GetQuarter(t.Month()))
+}
+
+// PreviousEndOfQuarter 获取时间的上一季度结束的时间
+// 2022-12-31 23:59:59.999999999 +0800 CST
+func PreviousEndOfQuarter2(t time.Time) time.Time {
+	return PreviousEndOfQuarter(t.Year(), GetQuarter(t.Month()))
+}
+
+// NextEndOfQuarter 获取时间的下一季度结束的时间
+// 2022-06-31 23:59:59.999999999 +0800 CST
+func NextEndOfQuarter2(t time.Time) time.Time {
+	return NextEndOfQuarter(t.Year(), GetQuarter(t.Month()))
+}

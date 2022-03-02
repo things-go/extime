@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// DateMonthSlash 格式: 2006-01
+// DateMonthSlash 格式: 2006.01
 type DateMonthDot time.Time
 
 // MarshalJSON implemented interface Marshaler
