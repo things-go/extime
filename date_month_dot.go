@@ -8,6 +8,9 @@ import (
 // DateMonthSlash 格式: 2006.01
 type DateMonthDot time.Time
 
+// ToDateMonthDot time.Time to DateMonthDot
+func ToDateMonthDot(t time.Time) DateMonthDot { return DateMonthDot(t) }
+
 // MarshalJSON implemented interface Marshaler
 func (t DateMonthDot) MarshalJSON() ([]byte, error) {
 	tt := time.Time(t)

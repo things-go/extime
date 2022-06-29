@@ -8,6 +8,9 @@ import (
 // Time 格式: 2006-01-02 15:04:05
 type Time time.Time
 
+// ToTime time.Time to Time
+func ToTime(t time.Time) Time { return Time(t) }
+
 // MarshalJSON implemented interface Marshaler
 func (t Time) MarshalJSON() ([]byte, error) {
 	tt := time.Time(t)

@@ -8,6 +8,8 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+var testTime = time.Date(2022, 1, 1, 1, 1, 0, 0, time.Local)
+
 func TestTimeJSON(t *testing.T) {
 	t.Run("nil", func(t *testing.T) {
 		var got Time

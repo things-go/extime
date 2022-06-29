@@ -9,6 +9,9 @@ import (
 // UnixTimestamp unix 时间戳
 type UnixTimestamp time.Time
 
+// ToUnixTimestamp time.Time to UnixTimestamp
+func ToUnixTimestamp(t time.Time) UnixTimestamp { return UnixTimestamp(t) }
+
 // MarshalJSON implemented interface Marshaler
 func (t UnixTimestamp) MarshalJSON() ([]byte, error) {
 	tt := time.Time(t)
@@ -45,6 +48,9 @@ func (t UnixTimestamp) String() string { return time.Time(t).String() }
 
 // UnixNanoTimestamp unix nano 时间戳
 type UnixNanoTimestamp time.Time
+
+// ToUnixNanoTimestamp time.Time to UnixNanoTimestamp
+func ToUnixNanoTimestamp(t time.Time) UnixNanoTimestamp { return UnixNanoTimestamp(t) }
 
 // MarshalJSON implemented interface Marshaler
 func (t UnixNanoTimestamp) MarshalJSON() ([]byte, error) {

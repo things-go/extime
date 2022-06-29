@@ -8,6 +8,9 @@ import (
 // DateNop 格式: 20060102
 type DateNop time.Time
 
+// ToDateNop time.Time to DateNop
+func ToDateNop(t time.Time) DateNop { return DateNop(t) }
+
 // MarshalJSON implemented interface Marshaler
 func (t DateNop) MarshalJSON() ([]byte, error) {
 	tt := time.Time(t)

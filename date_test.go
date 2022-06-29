@@ -8,6 +8,21 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestConver(t *testing.T) {
+	require.Equal(t, ToDate(testTime), Date(testTime))
+	require.Equal(t, ToDateDot(testTime), DateDot(testTime))
+	require.Equal(t, ToDateNop(testTime), DateNop(testTime))
+	require.Equal(t, ToDateSlash(testTime), DateSlash(testTime))
+	require.Equal(t, ToDateMonthDot(testTime), DateMonthDot(testTime))
+	require.Equal(t, ToDateMonthNop(testTime), DateMonthNop(testTime))
+	require.Equal(t, ToDateMonthSlash(testTime), DateMonthSlash(testTime))
+	require.Equal(t, ToTime(testTime), Time(testTime))
+	require.Equal(t, ToTimeNop(testTime), TimeNop(testTime))
+	require.Equal(t, ToUnixTimestamp(testTime), UnixTimestamp(testTime))
+	require.Equal(t, ToUnixNanoTimestamp(testTime), UnixNanoTimestamp(testTime))
+
+}
+
 func TestDateJSON(t *testing.T) {
 	t.Run("nil", func(t *testing.T) {
 		var got Date

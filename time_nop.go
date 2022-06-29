@@ -8,6 +8,9 @@ import (
 // TimeNop 格式: 20060102150405
 type TimeNop time.Time
 
+// ToTimeNop time.Time to TimeNop
+func ToTimeNop(t time.Time) TimeNop { return TimeNop(t) }
+
 // MarshalJSON implemented interface Marshaler
 func (t TimeNop) MarshalJSON() ([]byte, error) {
 	tt := time.Time(t)
