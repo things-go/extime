@@ -207,7 +207,6 @@ func TestGetQuarter(t *testing.T) {
 
 	date := time.Date(2022, 2, 1, 0, 0, 0, 0, time.Local)
 	require.Equal(t, GetQuarter2(date), Quarter1th)
-
 }
 
 func TestValidQuarter(t *testing.T) {

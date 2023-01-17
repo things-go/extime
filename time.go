@@ -72,3 +72,12 @@ func (t Time) StdTime() time.Time { return time.Time(t) }
 
 // String implemented interface Stringer
 func (t Time) String() string { return time.Time(t).Format(TimeLayout) }
+
+// ParseTime parse time with layout 2006-01-02 15:04:05
+func ParseTime(value string) (Time, error) {
+	t, err := time.ParseInLocation(TimeLayout, value, time.Local)
+	if err != nil {
+		return Time{}, err
+	}
+	return Time(t), nil
+}

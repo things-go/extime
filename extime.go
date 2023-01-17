@@ -137,13 +137,13 @@ func StartOfYear(t time.Time) time.Time {
 }
 
 // PreviousStartOfYear 获取时间上一年的开始时间.
-//  2023-01-01 00:00:00 +0800 CST
+// 2023-01-01 00:00:00 +0800 CST
 func PreviousStartOfYear(t time.Time) time.Time {
 	return StartOfYear(t).AddDate(-1, 0, 0)
 }
 
 // NextStartOfYear 获取时间下一年的开始时间.
-//  2023-01-01 00:00:00 +0800 CST
+// 2023-01-01 00:00:00 +0800 CST
 func NextStartOfYear(t time.Time) time.Time {
 	return StartOfYear(t).AddDate(1, 0, 0)
 }

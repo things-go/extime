@@ -20,7 +20,6 @@ func TestConver(t *testing.T) {
 	require.Equal(t, ToTimeNop(testTime), TimeNop(testTime))
 	require.Equal(t, ToUnixTimestamp(testTime), UnixTimestamp(testTime))
 	require.Equal(t, ToUnixNanoTimestamp(testTime), UnixNanoTimestamp(testTime))
-
 }
 
 func TestDateJSON(t *testing.T) {
