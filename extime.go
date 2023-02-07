@@ -22,7 +22,7 @@ func ValidYear(year int) bool { return year >= 1 && year <= 9999 }
 func ValidMonth(month int) bool { return month >= 1 && month <= 12 }
 
 // IsLeapYear 是否闰年
-func IsLeapYear(year int) bool { return year%4 == 0 && (year%100 != 0 || year%400 == 0) }
+func IsLeapYear(year int) bool { return (year%4 == 0 && year%100 != 0) || year%400 == 0 }
 
 // Days time.Duration转化为天数
 func Days(d time.Duration) float64 {

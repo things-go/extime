@@ -82,6 +82,7 @@ func TestDays(t *testing.T) {
 func TestYearDays(t *testing.T) {
 	require.Equal(t, 366, YearDays(2020))
 	require.Equal(t, 365, YearDays(2019))
+	require.Equal(t, 366, YearDays(2000))
 }
 
 func TestMonthDays(t *testing.T) {
